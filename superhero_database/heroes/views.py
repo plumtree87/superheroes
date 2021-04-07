@@ -58,4 +58,14 @@ def edit(request, hero_id):
         return render(request, 'heroes/edit.html', context)
 
 
-
+def delete(request, hero_id):
+    if request.method == 'POST':
+        details = Hero.objects.get(pk=hero_id)
+        details.delete()
+        return HttpResponseRedirect(reverse('heroes:index'))
+    else:
+        details = Hero.objects.get(pk=hero_id)
+        context = {
+            'details': details
+        }
+        return render(request, 'heroes/delete.html', context)
