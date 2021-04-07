@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+     {% load static %}
+        <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>More Info</title>
 </head>
-<body>
-<h1> Hero edit!</h1>
+<body style="color: white">
+<h> Hero edit!</h>
 <ul>
 
-    <li><h2> Name: {{details.name}}  </h2>
-        <h3>Alter_ego: {{details.alter_ego}} </h3>
-        <h4>Primary Ability: {{details.primary_ability}}</h4>
-        <h5>Secondary Ability: {{details.secondary_ability}}</h5>
-        <h6>Catch Phrase: {{details.catch_phrase}}</h6>
+    <li><h> Name: {{details.name}} <br> </h>
+        <h>Alter_ego: {{details.alter_ego}} <br> </h>
+        <h>Primary Ability: {{details.primary_ability}} <br> </h>
+        <h>Secondary Ability: {{details.secondary_ability}} <br> </h>
+        <h>Catch Phrase: {{details.catch_phrase}}<br> </h>
     </li>
 </ul>
 <form action="{% url 'heroes:edit' details.id %}" method="post">
@@ -25,6 +31,7 @@
     <input type="submit" value="Submit Edited Version!">
 
 </form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
 </body>
 </html>
