@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>More Info</title>
+</head>
+<body>
+<h1> Hero edit!</h1>
+<ul>
+
+    <li><h2> Name: {{details.name}}  </h2>
+        <h3>Alter_ego: {{details.alter_ego}} </h3>
+        <h4>Primary Ability: {{details.primary_ability}}</h4>
+        <h5>Secondary Ability: {{details.secondary_ability}}</h5>
+        <h6>Catch Phrase: {{details.catch_phrase}}</h6>
+    </li>
+</ul>
+<form action="{% url 'heroes:edit' details.id %}" method="post">
+    {% csrf_token %}
+    Name:<input type="text" name="name" id="name"><br>
+    Alter Ego:<input type="text" name="alter_ego" id="alter_ego"><br>
+    Primary Ability:<input type="text" name="primary_ability" id="primary_ability"><br>
+    Secondary Ability:<input type="text" name="secondary_ability" id="secondary_ability"><br>
+    Catch Phrase:<input type ="text" name="catch_phrase" id="catch_phrase"><br>
+    <input type="submit" value="Add new!">
+
+</form>
+</body>
+</html>

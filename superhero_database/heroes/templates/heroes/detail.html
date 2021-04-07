@@ -13,7 +13,9 @@
         <h4>Primary Ability: {{details.primary_ability}}</h4>
         <h5>Secondary Ability: {{details.secondary_ability}}</h5>
         <h6>Catch Phrase: {{details.catch_phrase}}</h6>
+         <a href = "{% url 'heroes:edit' details.id %}">edit<br></a>
     </li>
+
 
 </ul>
 </body>
