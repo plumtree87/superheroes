@@ -20,7 +20,7 @@
         <h>Secondary Ability: {{details.secondary_ability}} <br> </h>
         <h>Catch Phrase: {{details.catch_phrase}}<br> </h>
     </li>
-</ul>git add . because it w
+</ul>
 <form action="{% url 'heroes:edit' details.id %}" method="post">
     {% csrf_token %}
     Name:<input type="text" name="name" id="name"><br>
